@@ -19,7 +19,7 @@ spec:
   template:
     metadata:
       labels:
-        purpose: dp-service
+        purpose: ingress-service
         project: roboshop
         name: app1
     spec:
@@ -32,7 +32,7 @@ kind: Service
 metadata:
   name: app1
   lables:
-    purpose: dp-service
+    purpose: ingress-service
     project: roboshop
     name: app1
 spec:
