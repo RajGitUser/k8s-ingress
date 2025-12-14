@@ -53,7 +53,8 @@ metadata:
     alb.ingress.kubernetes.io/listen-ports:  '[{"HTTPS": 443}]'
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:848332098195:certificate/e8bd18f7-4b77-4476-bce6-ac4510448bca
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/tags: Environment=dev,
+    alb.ingress.kubernetes.io/tags: Environment=dev
+    alb.ingress.kubernetes.io/target-type: ip
 spec:
   ingressClassName: alb 
   rules:
