@@ -73,18 +73,18 @@ service.yaml – Exposes the pod(s) internally via a Kubernetes Service.
 
 ingress.yaml – Defines an Ingress resource routing external traffic to the corresponding service.
 
-🚀 Key Concepts
-🔹 Kubernetes Ingress
+# 🚀 Key Concepts
+### 🔹 Kubernetes Ingress
 
 An Ingress manages external access to services in a cluster, typically HTTP/HTTPS. Rules in an Ingress resource allow routing requests based on hostnames or paths (e.g., /app1, /app2). 
 Kubernetes
 
-🔹 Ingress Controller
+### 🔹 Ingress Controller
 
 An Ingress Controller is required to make an Ingress resource effective. It watches Ingress resources and configures a load balancer or reverse proxy to implement the routing rules. Popular controllers include NGINX, Traefik, and cloud provider solutions. 
 Kubernetes
 
-🧰 Prerequisites
+# 🧰 Prerequisites
 
 Before applying manifests in this repo:
 
@@ -96,19 +96,19 @@ For example, install the NGINX Ingress Controller:
 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.0/deploy/static/provider/cloud/deploy.yaml
 
-🛠️ Usage
-1. Apply an Application and Ingress
+# 🛠️ Usage
+### 1. Apply an Application and Ingress
 kubectl apply -f app1/
 kubectl apply -f app2/
 
-2. Verify Ingress
+### 2. Verify Ingress
 kubectl get ingress
 kubectl describe ingress
 
 
 Traffic matching the host/path rules in the Ingress manifests will be forwarded to the respective services.
 
-🧠 Example Ingress Rule
+# 🧠 Example Ingress Rule
 
 A typical Ingress resource might look like:
 
@@ -133,7 +133,7 @@ spec:
 This rule routes requests matching example.com/app1 to the app1-svc service. 
 Kubernetes
 
-📌 Why This Is Useful
+# 📌 Why This Is Useful
 
 Provides HTTP/HTTPS routing into Kubernetes clusters. 
 Kubernetes
@@ -147,7 +147,7 @@ Kubernetes
 Works with popular Ingress Controllers for production-grade traffic management. 
 Kubernetes
 
-🤝 Contributing
+# 🤝 Contributing
 
 Contributions are welcome! You can:
 
